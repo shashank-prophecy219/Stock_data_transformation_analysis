@@ -1,0 +1,1442 @@
+{
+  "id" : "Stocks_analysis1__ma_final",
+  "metainfo" : {
+    "label" : "Stocks_analysis1__ma_final",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"sony\"",
+        "schema" : "\"orch_test\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "akam_ma_source##hrha6Esc" : {
+      "id" : "akam_ma_source##hrha6Esc",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "akam_ma_source",
+        "x" : 20,
+        "y" : 2740,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "akam_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "UnihmSU8",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ma_valid##I4gg3mf2" : {
+      "id" : "ma_valid##I4gg3mf2",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "ma_valid",
+        "x" : 1620,
+        "y" : 4040,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "days_in_window = 200"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qeCfz4nF",
+          "slug" : "ma_calculated"
+        } ],
+        "outputs" : [ {
+          "id" : "WgZIkNw1",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "amzn_ma_source##RWLAK2Js" : {
+      "id" : "amzn_ma_source##RWLAK2Js",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "amzn_ma_source",
+        "x" : 20,
+        "y" : 2940,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "amzn_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "vl5puAik",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ma_filtered##xmJT9Wat" : {
+      "id" : "ma_filtered##xmJT9Wat",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "ma_filtered",
+        "x" : 1220,
+        "y" : 4040,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "Date >= '2008-03-19'"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C7CuiD1w",
+          "slug" : "ma_combined"
+        } ],
+        "outputs" : [ {
+          "id" : "JOK2kXQR",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "wbd_ma_source##UqjFwHTW" : {
+      "id" : "wbd_ma_source##UqjFwHTW",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "wbd_ma_source",
+        "x" : 20,
+        "y" : 5340,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "wbd_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "NwZzL8I6",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "intc_ma_ticker##Ne6vGBAh" : {
+      "id" : "intc_ma_ticker##Ne6vGBAh",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "intc_ma_ticker",
+        "x" : 220,
+        "y" : 3540,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'INTC'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1612577805"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "2084522481"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "1406146152"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "PF3grRuo",
+          "slug" : "intc_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "lVN8dJpw",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "crm_ma_ticker##l8TYkJdT" : {
+      "id" : "crm_ma_ticker##l8TYkJdT",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "crm_ma_ticker",
+        "x" : 220,
+        "y" : 3140,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'CRM'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "875503486"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "985240270"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "1140716077"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hOp6Oinp",
+          "slug" : "crm_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "l5YXcwzX",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "amzn_ma_ticker##UMMDOxOg" : {
+      "id" : "amzn_ma_ticker##UMMDOxOg",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "amzn_ma_ticker",
+        "x" : 220,
+        "y" : 2940,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'AMZN'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "545112671"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "437962424"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "1827242450"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CoOkFOMr",
+          "slug" : "amzn_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "ZVEV5w0J",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "nflx_ma_ticker##mRv7QNYE" : {
+      "id" : "nflx_ma_ticker##mRv7QNYE",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "nflx_ma_ticker",
+        "x" : 220,
+        "y" : 4140,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'NFLX'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "961929628"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "1245585239"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "1358422837"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nvarxbyJ",
+          "slug" : "nflx_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "rXCSQGJe",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ma_ma_ticker##VOVV9MLF" : {
+      "id" : "ma_ma_ticker##VOVV9MLF",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "ma_ma_ticker",
+        "x" : 220,
+        "y" : 3940,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'MA'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "194063114"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "128625585"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "131229936"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "rgBf3g7J",
+          "slug" : "ma_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "tSkxEA8J",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ma_final_kVz0sJqq" : {
+      "id" : "ma_final_kVz0sJqq",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "ma_final"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM ma_final\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1",
+          "slug" : "output_port_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "lumn_ma_source##AV3yXBR3" : {
+      "id" : "lumn_ma_source##AV3yXBR3",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "lumn_ma_source",
+        "x" : 20,
+        "y" : 3740,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "lumn_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "IGEuaQEK",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ma_final##X7useiv3" : {
+      "id" : "ma_final##X7useiv3",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "ma_final",
+        "x" : 1820,
+        "y" : 4040,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "ticker"
+          },
+          "_row_id" : "1230178265"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "1463336226"
+        }, {
+          "expression" : {
+            "expression" : "close_price"
+          },
+          "_row_id" : "1373712908"
+        }, {
+          "expression" : {
+            "expression" : "ma_200"
+          },
+          "_row_id" : "683065688"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN close_price > ma_200\n    THEN 'Above MA'\n  WHEN close_price < ma_200\n    THEN 'Below MA'\n  ELSE 'At MA'\nEND"
+          },
+          "alias" : "price_vs_ma",
+          "_row_id" : "416529317"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TiKomJSp",
+          "slug" : "ma_valid"
+        } ],
+        "outputs" : [ {
+          "id" : "kVz0sJqq",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "lumn_ma_ticker##BZP9pIXy" : {
+      "id" : "lumn_ma_ticker##BZP9pIXy",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "lumn_ma_ticker",
+        "x" : 220,
+        "y" : 3740,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'LUMN'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1697386371"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "605273440"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "1760007399"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "THFniZwv",
+          "slug" : "lumn_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "AFUPwOwN",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "fdx_ma_ticker##iphSGiM1" : {
+      "id" : "fdx_ma_ticker##iphSGiM1",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "fdx_ma_ticker",
+        "x" : 220,
+        "y" : 3340,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'FDX'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1740383380"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "1520789860"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "617917459"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "oEhyFdZS",
+          "slug" : "fdx_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "cp3cp9E6",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "fdx_ma_source##W3OE7cwH" : {
+      "id" : "fdx_ma_source##W3OE7cwH",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "fdx_ma_source",
+        "x" : 20,
+        "y" : 3340,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "fdx_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "kctG4Igx",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "wbd_ma_ticker##fE3Otw5o" : {
+      "id" : "wbd_ma_ticker##fE3Otw5o",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "wbd_ma_ticker",
+        "x" : 220,
+        "y" : 5340,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'WBD'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1139930912"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "902542997"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "138511664"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zxBr8EbS",
+          "slug" : "wbd_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "mexQDcR6",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ups_ma_ticker##qeCnexLd" : {
+      "id" : "ups_ma_ticker##qeCnexLd",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "ups_ma_ticker",
+        "x" : 220,
+        "y" : 4940,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'UPS'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1290882658"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "536452133"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "1481099573"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Y5GjN84k",
+          "slug" : "ups_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "rVrbjX6l",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "akam_ma_ticker##BTApbU9H" : {
+      "id" : "akam_ma_ticker##BTApbU9H",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "akam_ma_ticker",
+        "x" : 220,
+        "y" : 2740,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'AKAM'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "510479638"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "621305997"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "2137157961"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "trYJc78N",
+          "slug" : "akam_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "l1dKhl6y",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "v_ma_ticker##cY8l4FON" : {
+      "id" : "v_ma_ticker##cY8l4FON",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "v_ma_ticker",
+        "x" : 220,
+        "y" : 5140,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'V'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "913962256"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "975683233"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "1002205296"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ry82s2y9",
+          "slug" : "v_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "XPfueaYI",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "intc_ma_source##Jtwu8hCx" : {
+      "id" : "intc_ma_source##Jtwu8hCx",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "intc_ma_source",
+        "x" : 20,
+        "y" : 3540,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "intc_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "R34uZz5F",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ma_calculated##w1NsyrHp" : {
+      "id" : "ma_calculated##w1NsyrHp",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "ma_calculated",
+        "x" : 1420,
+        "y" : 4040,
+        "phase" : 0
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "out",
+          "id" : "out",
+          "language" : "sql",
+          "content" : "SELECT\n        ticker,\n        Date,\n        ROUND(Close, 2) AS close_price,\n        ROUND(AVG(Close) OVER (\n          PARTITION BY ticker\n          ORDER BY Date\n          ROWS BETWEEN 199 PRECEDING AND CURRENT ROW\n        ), 2) AS ma_200,\n        COUNT(*) OVER (\n          PARTITION BY ticker\n          ORDER BY Date\n          ROWS BETWEEN 199 PRECEDING AND CURRENT ROW\n        ) AS days_in_window\n      FROM ma_filtered\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ttxe0qDK",
+          "slug" : "ma_filtered"
+        } ],
+        "outputs" : [ {
+          "id" : "a3wgGuH0",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "sony_ma_ticker##wj6B8n6S" : {
+      "id" : "sony_ma_ticker##wj6B8n6S",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "sony_ma_ticker",
+        "x" : 220,
+        "y" : 4740,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'SONY'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1799805957"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "1603436046"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "111338190"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "mHKcoZ7r",
+          "slug" : "sony_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "E4QH2Wp5",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "sony_ma_source##lPS8idw6" : {
+      "id" : "sony_ma_source##lPS8idw6",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "sony_ma_source",
+        "x" : 20,
+        "y" : 4740,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "sony_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ii3dggqT",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "nvda_ma_source##lzvq7xmv" : {
+      "id" : "nvda_ma_source##lzvq7xmv",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "nvda_ma_source",
+        "x" : 20,
+        "y" : 4340,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "nvda_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Va0KCyR9",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ups_ma_source##arnNk1Wh" : {
+      "id" : "ups_ma_source##arnNk1Wh",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ups_ma_source",
+        "x" : 20,
+        "y" : 4940,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "ups_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "v8qAnXgO",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "para_ma_source##jIiCx9vA" : {
+      "id" : "para_ma_source##jIiCx9vA",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "para_ma_source",
+        "x" : 20,
+        "y" : 4540,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "para_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "B1agcmRN",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "nflx_ma_source##fjT9Uhxs" : {
+      "id" : "nflx_ma_source##fjT9Uhxs",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "nflx_ma_source",
+        "x" : 20,
+        "y" : 4140,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "nflx_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "K6TZ5fYn",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ma_combined##kMkqi8OX" : {
+      "id" : "ma_combined##kMkqi8OX",
+      "component" : "Union",
+      "metadata" : {
+        "label" : "ma_combined",
+        "x" : 780,
+        "y" : 3920,
+        "phase" : 0
+      },
+      "properties" : {
+        "operationType" : "union",
+        "preserveDuplicates" : true,
+        "useMinus" : false,
+        "inputAliases" : [ "akam_ma_ticker", "amzn_ma_ticker", "crm_ma_ticker", "fdx_ma_ticker", "intc_ma_ticker", "lumn_ma_ticker", "ma_ma_ticker", "nflx_ma_ticker", "nvda_ma_ticker", "para_ma_ticker", "sony_ma_ticker", "ups_ma_ticker", "v_ma_ticker", "wbd_ma_ticker" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QWf0vUuM",
+          "slug" : "akam_ma_ticker"
+        }, {
+          "id" : "zVJn8t5X",
+          "slug" : "amzn_ma_ticker"
+        }, {
+          "id" : "UAAsmIDa",
+          "slug" : "crm_ma_ticker"
+        }, {
+          "id" : "g3vAWQxu",
+          "slug" : "fdx_ma_ticker"
+        }, {
+          "id" : "HYTHHXS4",
+          "slug" : "intc_ma_ticker"
+        }, {
+          "id" : "OuTVozl3",
+          "slug" : "lumn_ma_ticker"
+        }, {
+          "id" : "MNq8YhNp",
+          "slug" : "ma_ma_ticker"
+        }, {
+          "id" : "w82gTe75",
+          "slug" : "nflx_ma_ticker"
+        }, {
+          "id" : "ipLilVau",
+          "slug" : "nvda_ma_ticker"
+        }, {
+          "id" : "Qf1BVoN1",
+          "slug" : "para_ma_ticker"
+        }, {
+          "id" : "zP5b21Tk",
+          "slug" : "sony_ma_ticker"
+        }, {
+          "id" : "rN7oNwTH",
+          "slug" : "ups_ma_ticker"
+        }, {
+          "id" : "VSkPOxch",
+          "slug" : "v_ma_ticker"
+        }, {
+          "id" : "QEFdxNYS",
+          "slug" : "wbd_ma_ticker"
+        } ],
+        "outputs" : [ {
+          "id" : "iL7dOE5e",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "crm_ma_source##JfW0eAnc" : {
+      "id" : "crm_ma_source##JfW0eAnc",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "crm_ma_source",
+        "x" : 20,
+        "y" : 3140,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "crm_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "TkYvQiW1",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "nvda_ma_ticker##PGxySDhL" : {
+      "id" : "nvda_ma_ticker##PGxySDhL",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "nvda_ma_ticker",
+        "x" : 220,
+        "y" : 4340,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'NVDA'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "1671566674"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "343997525"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "141419616"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "b0nVPv1V",
+          "slug" : "nvda_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "QJEdnnDl",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "v_ma_source##hb2KlPZ4" : {
+      "id" : "v_ma_source##hb2KlPZ4",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "v_ma_source",
+        "x" : 20,
+        "y" : 5140,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "v_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "iUd6mLGz",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "para_ma_ticker##LiPqTITc" : {
+      "id" : "para_ma_ticker##LiPqTITc",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "para_ma_ticker",
+        "x" : 220,
+        "y" : 4540,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'PARA'"
+          },
+          "alias" : "ticker",
+          "_row_id" : "939873038"
+        }, {
+          "expression" : {
+            "expression" : "Date"
+          },
+          "_row_id" : "1048510146"
+        }, {
+          "expression" : {
+            "expression" : "Close"
+          },
+          "_row_id" : "23626914"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TLH5Ir2O",
+          "slug" : "para_ma_source"
+        } ],
+        "outputs" : [ {
+          "id" : "oC2HHEp2",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ma_ma_source##rfdETEMl" : {
+      "id" : "ma_ma_source##rfdETEMl",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ma_ma_source",
+        "x" : 20,
+        "y" : 3940,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "ma_daily_data",
+          "sourceType" : "Table",
+          "sourceName" : "t4_demo_data.company_share_price_analysis_data"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "NtYPK3z4",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_ma_final##X7useiv3_kVz0sJqq_ma_final_kVz0sJqq",
+    "source" : "ma_final##X7useiv3",
+    "sourcePort" : "kVz0sJqq",
+    "target" : "ma_final_kVz0sJqq",
+    "targetPort" : "input_port_1",
+    "isWireless" : false
+  }, {
+    "id" : "kmPZRalr",
+    "source" : "ma_valid##I4gg3mf2",
+    "sourcePort" : "WgZIkNw1",
+    "target" : "ma_final##X7useiv3",
+    "targetPort" : "TiKomJSp",
+    "isWireless" : false
+  }, {
+    "id" : "Yd9mUIzE",
+    "source" : "ma_calculated##w1NsyrHp",
+    "sourcePort" : "a3wgGuH0",
+    "target" : "ma_valid##I4gg3mf2",
+    "targetPort" : "qeCfz4nF",
+    "isWireless" : false
+  }, {
+    "id" : "mdI18aPc",
+    "source" : "ma_filtered##xmJT9Wat",
+    "sourcePort" : "JOK2kXQR",
+    "target" : "ma_calculated##w1NsyrHp",
+    "targetPort" : "ttxe0qDK",
+    "isWireless" : false
+  }, {
+    "id" : "IYvnqt0V",
+    "source" : "ma_combined##kMkqi8OX",
+    "sourcePort" : "iL7dOE5e",
+    "target" : "ma_filtered##xmJT9Wat",
+    "targetPort" : "C7CuiD1w",
+    "isWireless" : false
+  }, {
+    "id" : "kL914LnW",
+    "source" : "akam_ma_ticker##BTApbU9H",
+    "sourcePort" : "l1dKhl6y",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "QWf0vUuM",
+    "isWireless" : false
+  }, {
+    "id" : "DJBv1K7P",
+    "source" : "amzn_ma_ticker##UMMDOxOg",
+    "sourcePort" : "ZVEV5w0J",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "zVJn8t5X",
+    "isWireless" : false
+  }, {
+    "id" : "rig50elH",
+    "source" : "crm_ma_ticker##l8TYkJdT",
+    "sourcePort" : "l5YXcwzX",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "UAAsmIDa",
+    "isWireless" : false
+  }, {
+    "id" : "vmdFKkFl",
+    "source" : "fdx_ma_ticker##iphSGiM1",
+    "sourcePort" : "cp3cp9E6",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "g3vAWQxu",
+    "isWireless" : false
+  }, {
+    "id" : "uICe9pmQ",
+    "source" : "intc_ma_ticker##Ne6vGBAh",
+    "sourcePort" : "lVN8dJpw",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "HYTHHXS4",
+    "isWireless" : false
+  }, {
+    "id" : "JFfLMgt5",
+    "source" : "lumn_ma_ticker##BZP9pIXy",
+    "sourcePort" : "AFUPwOwN",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "OuTVozl3",
+    "isWireless" : false
+  }, {
+    "id" : "Q1MQN3ca",
+    "source" : "ma_ma_ticker##VOVV9MLF",
+    "sourcePort" : "tSkxEA8J",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "MNq8YhNp",
+    "isWireless" : false
+  }, {
+    "id" : "rqi0gMrS",
+    "source" : "nflx_ma_ticker##mRv7QNYE",
+    "sourcePort" : "rXCSQGJe",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "w82gTe75",
+    "isWireless" : false
+  }, {
+    "id" : "TfhFWChS",
+    "source" : "nvda_ma_ticker##PGxySDhL",
+    "sourcePort" : "QJEdnnDl",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "ipLilVau",
+    "isWireless" : false
+  }, {
+    "id" : "aNazrXMp",
+    "source" : "para_ma_ticker##LiPqTITc",
+    "sourcePort" : "oC2HHEp2",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "Qf1BVoN1",
+    "isWireless" : false
+  }, {
+    "id" : "QQem1rOZ",
+    "source" : "sony_ma_ticker##wj6B8n6S",
+    "sourcePort" : "E4QH2Wp5",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "zP5b21Tk",
+    "isWireless" : false
+  }, {
+    "id" : "v0jWmJ3m",
+    "source" : "ups_ma_ticker##qeCnexLd",
+    "sourcePort" : "rVrbjX6l",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "rN7oNwTH",
+    "isWireless" : false
+  }, {
+    "id" : "Kjmlm4By",
+    "source" : "v_ma_ticker##cY8l4FON",
+    "sourcePort" : "XPfueaYI",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "VSkPOxch",
+    "isWireless" : false
+  }, {
+    "id" : "beI3MoU2",
+    "source" : "wbd_ma_ticker##fE3Otw5o",
+    "sourcePort" : "mexQDcR6",
+    "target" : "ma_combined##kMkqi8OX",
+    "targetPort" : "QEFdxNYS",
+    "isWireless" : false
+  }, {
+    "id" : "tzlexDXo",
+    "source" : "akam_ma_source##hrha6Esc",
+    "sourcePort" : "UnihmSU8",
+    "target" : "akam_ma_ticker##BTApbU9H",
+    "targetPort" : "trYJc78N",
+    "isWireless" : false
+  }, {
+    "id" : "yBjjUgX5",
+    "source" : "amzn_ma_source##RWLAK2Js",
+    "sourcePort" : "vl5puAik",
+    "target" : "amzn_ma_ticker##UMMDOxOg",
+    "targetPort" : "CoOkFOMr",
+    "isWireless" : false
+  }, {
+    "id" : "uBbuzdqb",
+    "source" : "crm_ma_source##JfW0eAnc",
+    "sourcePort" : "TkYvQiW1",
+    "target" : "crm_ma_ticker##l8TYkJdT",
+    "targetPort" : "hOp6Oinp",
+    "isWireless" : false
+  }, {
+    "id" : "p56TOmlr",
+    "source" : "fdx_ma_source##W3OE7cwH",
+    "sourcePort" : "kctG4Igx",
+    "target" : "fdx_ma_ticker##iphSGiM1",
+    "targetPort" : "oEhyFdZS",
+    "isWireless" : false
+  }, {
+    "id" : "RbFBIffV",
+    "source" : "intc_ma_source##Jtwu8hCx",
+    "sourcePort" : "R34uZz5F",
+    "target" : "intc_ma_ticker##Ne6vGBAh",
+    "targetPort" : "PF3grRuo",
+    "isWireless" : false
+  }, {
+    "id" : "QpBckeK0",
+    "source" : "lumn_ma_source##AV3yXBR3",
+    "sourcePort" : "IGEuaQEK",
+    "target" : "lumn_ma_ticker##BZP9pIXy",
+    "targetPort" : "THFniZwv",
+    "isWireless" : false
+  }, {
+    "id" : "qhKAgfUY",
+    "source" : "ma_ma_source##rfdETEMl",
+    "sourcePort" : "NtYPK3z4",
+    "target" : "ma_ma_ticker##VOVV9MLF",
+    "targetPort" : "rgBf3g7J",
+    "isWireless" : false
+  }, {
+    "id" : "PMEr91ui",
+    "source" : "nflx_ma_source##fjT9Uhxs",
+    "sourcePort" : "K6TZ5fYn",
+    "target" : "nflx_ma_ticker##mRv7QNYE",
+    "targetPort" : "nvarxbyJ",
+    "isWireless" : false
+  }, {
+    "id" : "PsRjd3nB",
+    "source" : "nvda_ma_source##lzvq7xmv",
+    "sourcePort" : "Va0KCyR9",
+    "target" : "nvda_ma_ticker##PGxySDhL",
+    "targetPort" : "b0nVPv1V",
+    "isWireless" : false
+  }, {
+    "id" : "nEP5ODgf",
+    "source" : "para_ma_source##jIiCx9vA",
+    "sourcePort" : "B1agcmRN",
+    "target" : "para_ma_ticker##LiPqTITc",
+    "targetPort" : "TLH5Ir2O",
+    "isWireless" : false
+  }, {
+    "id" : "amNGV7pl",
+    "source" : "sony_ma_source##lPS8idw6",
+    "sourcePort" : "ii3dggqT",
+    "target" : "sony_ma_ticker##wj6B8n6S",
+    "targetPort" : "mHKcoZ7r",
+    "isWireless" : false
+  }, {
+    "id" : "JfwGHQG5",
+    "source" : "ups_ma_source##arnNk1Wh",
+    "sourcePort" : "v8qAnXgO",
+    "target" : "ups_ma_ticker##qeCnexLd",
+    "targetPort" : "Y5GjN84k",
+    "isWireless" : false
+  }, {
+    "id" : "TlkAhAZc",
+    "source" : "v_ma_source##hb2KlPZ4",
+    "sourcePort" : "iUd6mLGz",
+    "target" : "v_ma_ticker##cY8l4FON",
+    "targetPort" : "ry82s2y9",
+    "isWireless" : false
+  }, {
+    "id" : "ZUZhQSB6",
+    "source" : "wbd_ma_source##UqjFwHTW",
+    "sourcePort" : "NwZzL8I6",
+    "target" : "wbd_ma_ticker##fE3Otw5o",
+    "targetPort" : "zxBr8EbS",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}

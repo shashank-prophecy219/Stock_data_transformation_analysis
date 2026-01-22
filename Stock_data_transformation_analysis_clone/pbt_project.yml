@@ -1,0 +1,514 @@
+name: Stock_data_transformation_analysis
+description: ''
+version: '1'
+author: sony@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2026-01-21 08:04:02'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: sony@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2026-01-21 08:04:24'
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: sony@prophecy.io
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2026-01-21 08:36:26'
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/t4_demo_data_company_share_price_analysis_data:
+    name: t4_demo_data_company_share_price_analysis_data
+    description: null
+    author: sony@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2026-01-21 08:50:14'
+    tables:
+    - name: akam_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:50:14'
+      tableType: table
+    - name: amzn_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: crm_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: fdx_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: intc_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: lumn_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: ma_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: nflx_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: nvda_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: para_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: sony_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: ups_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: v_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+    - name: wbd_daily_data
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Date
+          dataType:
+            type: Date
+        - name: Open
+          dataType:
+            type: Double
+        - name: High
+          dataType:
+            type: Double
+        - name: Low
+          dataType:
+            type: Double
+        - name: Close
+          dataType:
+            type: Double
+        - name: Adj Close
+          dataType:
+            type: Double
+        - name: Volume
+          dataType:
+            type: Bigint
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2026-01-21 08:54:45'
+      tableType: table
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: sony@prophecy.io
+  createdAt: '2026-01-21 08:04:02'
+dependencies: []
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}
+projectConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/Stocks_analysis1:
+    name: Stocks_analysis1
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/Stocks_analysis1.json
+    - pipelines/Stocks_analysis1.py
+    - models/Stocks_analysis1/schema.yml
+    - models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql
+    - models/Stocks_analysis1/Stocks_analysis1__ma_final.sql
+    - models/Stocks_analysis1/Stocks_analysis1__q2_final.sql
+    - models/Stocks_analysis1/Stocks_analysis1__q3_final.sql
+    createdAt: '2026-01-21 08:36:26'
+sqlBusinessApps:
+  .prophecy/metadata/sqlbusinessapp/stocks_analysis_dashboard:
+    name: stocks_analysis_dashboard
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/stocks_analysis_dashboard.json
+    createdAt: '2026-01-22 06:53:54'
+    sqlOrchestrationPipelineName: Stocks_analysis1

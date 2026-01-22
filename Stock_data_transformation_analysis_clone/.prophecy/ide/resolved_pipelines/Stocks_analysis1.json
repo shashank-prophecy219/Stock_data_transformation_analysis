@@ -1,0 +1,545 @@
+{
+  "id" : "Stocks_analysis1",
+  "metainfo" : {
+    "label" : "Stocks_analysis1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "processesVsModelFiles" : {
+      "amzn_q2_source##un8K5LJ0" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q1_last_prices_g##UV7QCRut" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "akam_ma_source##hrha6Esc" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "ma_valid##I4gg3mf2" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "lumn_source##Nj7wKXmB" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "amzn_ma_source##RWLAK2Js" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "nvda_q3_ticker##fd3DXEOu" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "akam_q3_source##HeNFgWN8" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "nflx_source##BIdlwZfm" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "combined_stocks##VjoTQzJa" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "wbd_q3_source##mJq3uicG" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q3_filtered##NGtQG7St" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "amzn_source##fq1NuZvc" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "lumn_q3_ticker##EZ9S6APe" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "ma_filtered##xmJT9Wat" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "q1_first_prices_##qXZLVVy9" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "nvda_q2_ticker##vXnaXVU5" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "wbd_ma_source##UqjFwHTW" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "lumn_q2_source##ERVgQGtu" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q1_price_change_##lIMgKL10" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "intc_ma_ticker##Ne6vGBAh" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "crm_source##kWbPtV9L" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "intc_q3_ticker##pAwjgM9P" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "sony_q3_source##nYWjunDK" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "sony_q2_ticker##PGEpn8Sw" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "ma_q2_ticker##jyhC4nGw" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "para_with_ticker##yi1UdcNu" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "q2_yearly_gains##U8AcO2pU" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q3_combined##sXctGatq" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "intc_q2_ticker##Detnbt8W" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "nvda_q2_source##cvvSP8uB" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "fdx_q2_ticker##CrKjHAHp" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "v_q3_source##sLzC9kSu" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "crm_q3_ticker##nLfo78WP" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q2_year_boundari##Kf6cqwHU" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "crm_ma_ticker##l8TYkJdT" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "crm_with_ticker##ZrFYDnS5" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "v_with_ticker##JFbczX2r" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "q2_final_YrA5CZy1" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "amzn_ma_ticker##UMMDOxOg" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "sony_q3_ticker##aUnnBsyM" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "wbd_q3_ticker##nwEytqnQ" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "nflx_ma_ticker##mRv7QNYE" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "ma_ma_ticker##VOVV9MLF" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "ma_final_kVz0sJqq" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "akam_q2_ticker##suAWXnIE" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q1_final_sorted##igAaocIO" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "intc_q3_source##sZR49zMS" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q2_final##zcidfBYt" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "ma_q2_source##Nl40G7TW" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q2_filtered##DR7ycDIl" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "nflx_q2_source##CCcGaHfy" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "lumn_ma_source##AV3yXBR3" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "ma_final##X7useiv3" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "sony_source##d0XWl604" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "q3_final_VUZuvMXH" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "v_q2_ticker##jO0LeZ2O" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "ma_q3_ticker##BnxXhU1l" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "amzn_q2_ticker##HsLuGKbg" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q1_last_prices_s##Wiz6oTEB" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "nvda_source##SxWe1IjR" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "lumn_ma_ticker##BZP9pIXy" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "amzn_q3_source##NByDCt17" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q1_filtered_to_c##xp5M8HrT" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "wbd_source##u6WJ9uQd" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "intc_q2_source##MeQ7l94X" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "crm_q3_source##mPECIXUm" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "crm_q2_ticker##qNoHWD0T" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q3_with_prev_clo##fhBMf0NT" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q2_combined##H0rAbG35" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q2_last_prices##d8Xm1yoy" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "ups_q3_ticker##HlY8gkbv" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "fdx_q2_source##xBaLnV7i" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "sony_with_ticker##cY9W8v1N" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "akam_with_ticker##S9VqdKyJ" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "para_q3_source##QSwgC9xf" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "amzn_with_ticker##YxIg2x3v" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "q3_monthly_avg##XVXTDZJH" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "intc_with_ticker##iKIlgzcI" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "akam_source##Rx2pSyNA" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "fdx_ma_ticker##iphSGiM1" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "fdx_ma_source##W3OE7cwH" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "q1_first_prices_##PT1OISQw" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "wbd_q2_ticker##siOg9mro" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "wbd_ma_ticker##fE3Otw5o" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "amzn_q3_ticker##cARZFUHU" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "ups_source##c6X2KgHu" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "lumn_q3_source##CmMTDx2t" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q3_daily_change##LTmAXSOz" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "v_q2_source##jv4PKsMf" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "lumn_with_ticker##eR8E1lJ3" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "fdx_source##O3Zkxndj" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "ups_ma_ticker##qeCnexLd" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "nflx_q3_source##QuSmjL3l" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q1_price_change_##ktIXOsw3" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "nvda_q3_source##HWiuh6Np" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q1_last_prices_f##Ey1ubofQ" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "akam_q2_source##KvIRlVye" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "lumn_q2_ticker##MqRYbXFe" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "ma_source##MA0VTs0l" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "akam_ma_ticker##BTApbU9H" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "q1_first_prices_##hrtbqgJc" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "q2_with_year##z07JJI7e" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "v_ma_ticker##cY8l4FON" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "intc_ma_source##Jtwu8hCx" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "intc_source##rxiWXd1p" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "sony_q2_source##iqL2OT8a" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "ups_q2_source##oATEfjvg" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "ma_calculated##w1NsyrHp" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "wbd_with_ticker##kYuKDZIY" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "q3_valid_changes##bDJiAHPL" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "ma_with_ticker##LKFzctIu" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "sony_ma_ticker##wj6B8n6S" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "akam_q3_ticker##dQeHRaCK" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "q3_final##HBmdftc4" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "fdx_q3_source##pgxmht6y" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "sony_ma_source##lPS8idw6" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "nvda_ma_source##lzvq7xmv" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "ups_ma_source##arnNk1Wh" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "para_ma_source##jIiCx9vA" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "q2_ranked##TOaqP57P" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "nflx_ma_source##fjT9Uhxs" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "ups_with_ticker##GSdf5RmS" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "ma_combined##kMkqi8OX" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "nflx_q3_ticker##RfLpj6bb" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "ups_q2_ticker##ZwVh0qa2" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q1_first_prices_##SOGEw1cT" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "wbd_q2_source##gf2GsuDw" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "fdx_q3_ticker##pQlebKpS" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "crm_ma_source##JfW0eAnc" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "nvda_ma_ticker##PGxySDhL" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "v_q3_ticker##FOlWarOs" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "nflx_q2_ticker##tb1Olq7K" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "para_q3_ticker##LLEhMRQZ" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "para_source##i5gs1CMb" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "para_q2_ticker##yN1EeSmx" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "crm_q2_source##I8eMmDI7" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q2_first_prices##YQYqmJPP" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "ma_q3_source##XjMHNBtM" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "nflx_with_ticker##xP5c5sVW" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "v_ma_source##hb2KlPZ4" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "q2_best_year##DLjs0oau" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "q1_last_prices_f##RmqmU3kr" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "fdx_with_ticker##tqidRDQ4" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "v_source##bBhbQnon" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "q1_final_sorted_fPnZwYZg" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql",
+      "para_q2_source##vVaB98DT" : "models/Stocks_analysis1/Stocks_analysis1__q2_final.sql",
+      "para_ma_ticker##LiPqTITc" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "q3_with_year_mon##et6MsyH0" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "ma_ma_source##rfdETEMl" : "models/Stocks_analysis1/Stocks_analysis1__ma_final.sql",
+      "ups_q3_source##RJZoIGJ0" : "models/Stocks_analysis1/Stocks_analysis1__q3_final.sql",
+      "nvda_with_ticker##SiwEqXY0" : "models/Stocks_analysis1/Stocks_analysis1__q1_final_sorted.sql"
+    }
+  },
+  "processes" : {
+    "qV6gHZhOMa" : {
+      "id" : "qV6gHZhOMa",
+      "component" : "Visualize",
+      "metadata" : {
+        "label" : "ma_200_results",
+        "x" : 2020,
+        "y" : 4040,
+        "phase" : 0
+      },
+      "properties" : { },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3JWAr2opCU",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "ck6jk4RvcC",
+          "slug" : "out_0"
+        } ]
+      }
+    },
+    "q1_final_sorted##igAaocIO" : {
+      "id" : "q1_final_sorted##igAaocIO",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Stocks_analysis1__q1_final_sorted",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "Stocks_analysis1__q1_final_sorted"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "q1_final_sorted_fPnZwYZg", "q1_final_sorted##igAaocIO", "q1_price_change_##ktIXOsw3", "q1_price_change_##lIMgKL10", "q1_first_prices_##PT1OISQw", "q1_last_prices_f##Ey1ubofQ", "q1_first_prices_##qXZLVVy9", "q1_first_prices_##hrtbqgJc", "q1_last_prices_s##Wiz6oTEB", "q1_last_prices_g##UV7QCRut", "q1_filtered_to_c##xp5M8HrT", "q1_first_prices_##SOGEw1cT", "q1_last_prices_f##RmqmU3kr", "combined_stocks##VjoTQzJa", "akam_with_ticker##S9VqdKyJ", "akam_source##Rx2pSyNA", "amzn_with_ticker##YxIg2x3v", "amzn_source##fq1NuZvc", "crm_with_ticker##ZrFYDnS5", "crm_source##kWbPtV9L", "fdx_with_ticker##tqidRDQ4", "fdx_source##O3Zkxndj", "intc_with_ticker##iKIlgzcI", "intc_source##rxiWXd1p", "lumn_with_ticker##eR8E1lJ3", "lumn_source##Nj7wKXmB", "ma_with_ticker##LKFzctIu", "ma_source##MA0VTs0l", "nflx_with_ticker##xP5c5sVW", "nflx_source##BIdlwZfm", "nvda_with_ticker##SiwEqXY0", "nvda_source##SxWe1IjR", "para_with_ticker##yi1UdcNu", "para_source##i5gs1CMb", "sony_with_ticker##cY9W8v1N", "sony_source##d0XWl604", "ups_with_ticker##GSdf5RmS", "ups_source##c6X2KgHu", "v_with_ticker##JFbczX2r", "v_source##bBhbQnon", "wbd_with_ticker##kYuKDZIY", "wbd_source##u6WJ9uQd" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_9",
+          "slug" : "in_9"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_10",
+          "slug" : "in_10"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_11",
+          "slug" : "in_11"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_12",
+          "slug" : "in_12"
+        }, {
+          "id" : "Stocks_analysis1__q1_final_sorted_in_13",
+          "slug" : "in_13"
+        } ],
+        "outputs" : [ {
+          "id" : "Stocks_analysis1__q1_final_sorted_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "53MlFNG3ZA" : {
+      "id" : "53MlFNG3ZA",
+      "component" : "Visualize",
+      "metadata" : {
+        "label" : "q1_price_change_results",
+        "x" : 2820,
+        "y" : 1320,
+        "phase" : 0
+      },
+      "properties" : { },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "g9st4MyfhB",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "SPu1Oes6I5",
+          "slug" : "out_0"
+        } ]
+      }
+    },
+    "q2_final##zcidfBYt" : {
+      "id" : "q2_final##zcidfBYt",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Stocks_analysis1__q2_final",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "Stocks_analysis1__q2_final"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "q2_final_YrA5CZy1", "q2_final##zcidfBYt", "q2_best_year##DLjs0oau", "q2_ranked##TOaqP57P", "q2_yearly_gains##U8AcO2pU", "q2_first_prices##YQYqmJPP", "q2_last_prices##d8Xm1yoy", "q2_with_year##z07JJI7e", "q2_year_boundari##Kf6cqwHU", "q2_filtered##DR7ycDIl", "q2_combined##H0rAbG35", "akam_q2_ticker##suAWXnIE", "akam_q2_source##KvIRlVye", "amzn_q2_ticker##HsLuGKbg", "amzn_q2_source##un8K5LJ0", "crm_q2_ticker##qNoHWD0T", "crm_q2_source##I8eMmDI7", "fdx_q2_ticker##CrKjHAHp", "fdx_q2_source##xBaLnV7i", "intc_q2_ticker##Detnbt8W", "intc_q2_source##MeQ7l94X", "lumn_q2_ticker##MqRYbXFe", "lumn_q2_source##ERVgQGtu", "ma_q2_ticker##jyhC4nGw", "ma_q2_source##Nl40G7TW", "nflx_q2_ticker##tb1Olq7K", "nflx_q2_source##CCcGaHfy", "nvda_q2_ticker##vXnaXVU5", "nvda_q2_source##cvvSP8uB", "para_q2_ticker##yN1EeSmx", "para_q2_source##vVaB98DT", "sony_q2_ticker##PGEpn8Sw", "sony_q2_source##iqL2OT8a", "ups_q2_ticker##ZwVh0qa2", "ups_q2_source##oATEfjvg", "v_q2_ticker##jO0LeZ2O", "v_q2_source##jv4PKsMf", "wbd_q2_ticker##siOg9mro", "wbd_q2_source##gf2GsuDw" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Stocks_analysis1__q2_final_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_9",
+          "slug" : "in_9"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_10",
+          "slug" : "in_10"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_11",
+          "slug" : "in_11"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_12",
+          "slug" : "in_12"
+        }, {
+          "id" : "Stocks_analysis1__q2_final_in_13",
+          "slug" : "in_13"
+        } ],
+        "outputs" : [ {
+          "id" : "Stocks_analysis1__q2_final_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "ma_final##X7useiv3" : {
+      "id" : "ma_final##X7useiv3",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Stocks_analysis1__ma_final",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "Stocks_analysis1__ma_final"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "ma_final_kVz0sJqq", "ma_final##X7useiv3", "ma_valid##I4gg3mf2", "ma_calculated##w1NsyrHp", "ma_filtered##xmJT9Wat", "ma_combined##kMkqi8OX", "akam_ma_ticker##BTApbU9H", "akam_ma_source##hrha6Esc", "amzn_ma_ticker##UMMDOxOg", "amzn_ma_source##RWLAK2Js", "crm_ma_ticker##l8TYkJdT", "crm_ma_source##JfW0eAnc", "fdx_ma_ticker##iphSGiM1", "fdx_ma_source##W3OE7cwH", "intc_ma_ticker##Ne6vGBAh", "intc_ma_source##Jtwu8hCx", "lumn_ma_ticker##BZP9pIXy", "lumn_ma_source##AV3yXBR3", "ma_ma_ticker##VOVV9MLF", "ma_ma_source##rfdETEMl", "nflx_ma_ticker##mRv7QNYE", "nflx_ma_source##fjT9Uhxs", "nvda_ma_ticker##PGxySDhL", "nvda_ma_source##lzvq7xmv", "para_ma_ticker##LiPqTITc", "para_ma_source##jIiCx9vA", "sony_ma_ticker##wj6B8n6S", "sony_ma_source##lPS8idw6", "ups_ma_ticker##qeCnexLd", "ups_ma_source##arnNk1Wh", "v_ma_ticker##cY8l4FON", "v_ma_source##hb2KlPZ4", "wbd_ma_ticker##fE3Otw5o", "wbd_ma_source##UqjFwHTW" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Stocks_analysis1__ma_final_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_9",
+          "slug" : "in_9"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_10",
+          "slug" : "in_10"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_11",
+          "slug" : "in_11"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_12",
+          "slug" : "in_12"
+        }, {
+          "id" : "Stocks_analysis1__ma_final_in_13",
+          "slug" : "in_13"
+        } ],
+        "outputs" : [ {
+          "id" : "Stocks_analysis1__ma_final_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "iia6gXhyu1" : {
+      "id" : "iia6gXhyu1",
+      "component" : "Visualize",
+      "metadata" : {
+        "label" : "q3_monthly_avg_results",
+        "x" : 2620,
+        "y" : 9480,
+        "phase" : 0
+      },
+      "properties" : { },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KaBtbeKOTo",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "YbeQUqxKvM",
+          "slug" : "out_0"
+        } ]
+      }
+    },
+    "q3_final##HBmdftc4" : {
+      "id" : "q3_final##HBmdftc4",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Stocks_analysis1__q3_final",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "Stocks_analysis1__q3_final"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "q3_final_VUZuvMXH", "q3_final##HBmdftc4", "q3_monthly_avg##XVXTDZJH", "q3_with_year_mon##et6MsyH0", "q3_valid_changes##bDJiAHPL", "q3_daily_change##LTmAXSOz", "q3_with_prev_clo##fhBMf0NT", "q3_filtered##NGtQG7St", "q3_combined##sXctGatq", "akam_q3_ticker##dQeHRaCK", "akam_q3_source##HeNFgWN8", "amzn_q3_ticker##cARZFUHU", "amzn_q3_source##NByDCt17", "crm_q3_ticker##nLfo78WP", "crm_q3_source##mPECIXUm", "fdx_q3_ticker##pQlebKpS", "fdx_q3_source##pgxmht6y", "intc_q3_ticker##pAwjgM9P", "intc_q3_source##sZR49zMS", "lumn_q3_ticker##EZ9S6APe", "lumn_q3_source##CmMTDx2t", "ma_q3_ticker##BnxXhU1l", "ma_q3_source##XjMHNBtM", "nflx_q3_ticker##RfLpj6bb", "nflx_q3_source##QuSmjL3l", "nvda_q3_ticker##fd3DXEOu", "nvda_q3_source##HWiuh6Np", "para_q3_ticker##LLEhMRQZ", "para_q3_source##QSwgC9xf", "sony_q3_ticker##aUnnBsyM", "sony_q3_source##nYWjunDK", "ups_q3_ticker##HlY8gkbv", "ups_q3_source##RJZoIGJ0", "v_q3_ticker##FOlWarOs", "v_q3_source##sLzC9kSu", "wbd_q3_ticker##nwEytqnQ", "wbd_q3_source##mJq3uicG" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Stocks_analysis1__q3_final_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_5",
+          "slug" : "in_5"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_6",
+          "slug" : "in_6"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_7",
+          "slug" : "in_7"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_8",
+          "slug" : "in_8"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_9",
+          "slug" : "in_9"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_10",
+          "slug" : "in_10"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_11",
+          "slug" : "in_11"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_12",
+          "slug" : "in_12"
+        }, {
+          "id" : "Stocks_analysis1__q3_final_in_13",
+          "slug" : "in_13"
+        } ],
+        "outputs" : [ {
+          "id" : "Stocks_analysis1__q3_final_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "nJjuxSHC7R" : {
+      "id" : "nJjuxSHC7R",
+      "component" : "Visualize",
+      "metadata" : {
+        "label" : "q2_best_year_results",
+        "x" : 2820,
+        "y" : 6760,
+        "phase" : 0
+      },
+      "properties" : { },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fPMPJmAAhX",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "2m5Jv2NYof",
+          "slug" : "out_0"
+        } ]
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "nOUKGRMGki_to_fPMPJmAAhX",
+    "source" : "q2_final##zcidfBYt",
+    "sourcePort" : "Stocks_analysis1__q2_final_out_0",
+    "target" : "nJjuxSHC7R",
+    "targetPort" : "fPMPJmAAhX"
+  }, {
+    "id" : "9IV2gA7D0k_to_g9st4MyfhB",
+    "source" : "q1_final_sorted##igAaocIO",
+    "sourcePort" : "Stocks_analysis1__q1_final_sorted_out_0",
+    "target" : "53MlFNG3ZA",
+    "targetPort" : "g9st4MyfhB"
+  }, {
+    "id" : "tafuqYrPHo_to_3JWAr2opCU",
+    "source" : "ma_final##X7useiv3",
+    "sourcePort" : "Stocks_analysis1__ma_final_out_0",
+    "target" : "qV6gHZhOMa",
+    "targetPort" : "3JWAr2opCU"
+  }, {
+    "id" : "Az64XRoZKb_to_KaBtbeKOTo",
+    "source" : "q3_final##HBmdftc4",
+    "sourcePort" : "Stocks_analysis1__q3_final_out_0",
+    "target" : "iia6gXhyu1",
+    "targetPort" : "KaBtbeKOTo"
+  } ],
+  "component" : "Pipeline"
+}

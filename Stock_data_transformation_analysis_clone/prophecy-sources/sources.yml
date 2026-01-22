@@ -1,0 +1,385 @@
+---
+version: 2
+sources:
+- name: "t4_demo_data.company_share_price_analysis_data"
+  database: "t4_demo_data"
+  schema: "company_share_price_analysis_data"
+  tables:
+  - name: "akam_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "amzn_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "crm_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "fdx_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "intc_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "lumn_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "ma_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "nflx_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "nvda_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "para_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "sony_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "ups_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "v_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"
+  - name: "wbd_daily_data"
+    config:
+      tags:
+      - "pipeline:Stocks_analysis1"
+    columns:
+    - name: "Date"
+      dataType:
+        type: "Date"
+    - name: "Open"
+      dataType:
+        type: "Double"
+    - name: "High"
+      dataType:
+        type: "Double"
+    - name: "Low"
+      dataType:
+        type: "Double"
+    - name: "Close"
+      dataType:
+        type: "Double"
+    - name: "Adj Close"
+      dataType:
+        type: "Double"
+    - name: "Volume"
+      dataType:
+        type: "Bigint"
+    type: "table"

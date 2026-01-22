@@ -1,0 +1,292 @@
+{
+  "id" : "stocks_analysis_dashboard",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "Stocks_analysis1",
+    "parameterSet" : "default"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "366aa5796d0b4c76ab174",
+      "id" : "Text1",
+      "type" : "Text",
+      "properties" : {
+        "content" : "## Question 1: Price Change Over Common Period\n\nAnalyzes the total price change and percentage gain for each of the 14 companies from 2008-03-19 to present. This ensures a fair comparison using the common time window when all companies have data."
+      }
+    }, {
+      "key" : "a4b9f4015f0e4e749297c",
+      "id" : "bar1",
+      "type" : "bar",
+      "properties" : {
+        "tableId" : "53MlFNG3ZA",
+        "title" : "Price Change (%) by Company",
+        "config" : {
+          "xAxisColumn" : "ticker",
+          "yAxisColumn" : [ {
+            "name" : "percent_change",
+            "agg" : "Max",
+            "color" : "#4c4ddc"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "yAxisConfig" : { }
+        },
+        "type" : "bar"
+      }
+    }, {
+      "key" : "f6d4cd38db48459ca89eb",
+      "id" : "DataPreview1",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "53MlFNG3ZA",
+        "columns" : [ {
+          "key" : "ticker",
+          "column" : "ticker",
+          "label" : "ticker",
+          "selected" : true
+        }, {
+          "key" : "first_date",
+          "column" : "first_date",
+          "label" : "first_date",
+          "selected" : true
+        }, {
+          "key" : "first_close",
+          "column" : "first_close",
+          "label" : "first_close",
+          "selected" : true
+        }, {
+          "key" : "last_date",
+          "column" : "last_date",
+          "label" : "last_date",
+          "selected" : true
+        }, {
+          "key" : "last_close",
+          "column" : "last_close",
+          "label" : "last_close",
+          "selected" : true
+        }, {
+          "key" : "price_change",
+          "column" : "price_change",
+          "label" : "price_change",
+          "selected" : true
+        }, {
+          "key" : "percent_change",
+          "column" : "percent_change",
+          "label" : "percent_change",
+          "selected" : true
+        } ],
+        "title" : "Q1 Price Change Details"
+      }
+    }, {
+      "key" : "99a2feb8bac147ecb17e8",
+      "id" : "Text2",
+      "type" : "Text",
+      "properties" : {
+        "content" : "## Question 2: Highest Cumulative Gain Year\n\nIdentifies which year saw the highest cumulative gain for each company. Shows the year with the best annual performance based on percentage gain from start to end of year."
+      }
+    }, {
+      "key" : "0b31ddcd3c1c424ca7cfe",
+      "id" : "bar2",
+      "type" : "bar",
+      "properties" : {
+        "tableId" : "nJjuxSHC7R",
+        "title" : "Best Year Gain (%) by Company",
+        "config" : {
+          "xAxisColumn" : "ticker",
+          "yAxisColumn" : [ {
+            "name" : "percent_gain",
+            "agg" : "Max",
+            "color" : "#28a745"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "yAxisConfig" : { }
+        },
+        "type" : "bar"
+      }
+    }, {
+      "key" : "62707018644e4a54a3945",
+      "id" : "DataPreview2",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "nJjuxSHC7R",
+        "columns" : [ {
+          "key" : "ticker",
+          "column" : "ticker",
+          "label" : "ticker",
+          "selected" : true
+        }, {
+          "key" : "best_year",
+          "column" : "best_year",
+          "label" : "best_year",
+          "selected" : true
+        }, {
+          "key" : "year_start_price",
+          "column" : "year_start_price",
+          "label" : "year_start_price",
+          "selected" : true
+        }, {
+          "key" : "year_end_price",
+          "column" : "year_end_price",
+          "label" : "year_end_price",
+          "selected" : true
+        }, {
+          "key" : "price_change",
+          "column" : "price_change",
+          "label" : "price_change",
+          "selected" : true
+        }, {
+          "key" : "percent_gain",
+          "column" : "percent_gain",
+          "label" : "percent_gain",
+          "selected" : true
+        } ],
+        "title" : "Q2 Best Year Details"
+      }
+    }, {
+      "key" : "2f51a70b25a14d28be245",
+      "id" : "Text3",
+      "type" : "Text",
+      "properties" : {
+        "content" : "## Question 3: Average Gain/Loss by Year-Month\n\nCalculates the average daily percentage change aggregated by month for each company. Shows trading patterns and identifies which months tend to perform better or worse."
+      }
+    }, {
+      "key" : "b9d4a7147aad4cd482c8f",
+      "id" : "bar3",
+      "type" : "bar",
+      "properties" : {
+        "tableId" : "iia6gXhyu1",
+        "title" : "Average Daily Change (%) by Company",
+        "config" : {
+          "xAxisColumn" : "ticker",
+          "yAxisColumn" : [ {
+            "name" : "avg_daily_pct_change",
+            "agg" : "Avg",
+            "color" : "#17a2b8"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "yAxisConfig" : { }
+        },
+        "type" : "bar"
+      }
+    }, {
+      "key" : "45c7c6612b0f457185e45",
+      "id" : "DataPreview3",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "iia6gXhyu1",
+        "columns" : [ {
+          "key" : "ticker",
+          "column" : "ticker",
+          "label" : "ticker",
+          "selected" : true
+        }, {
+          "key" : "year_month",
+          "column" : "year_month",
+          "label" : "year_month",
+          "selected" : true
+        }, {
+          "key" : "trading_days",
+          "column" : "trading_days",
+          "label" : "trading_days",
+          "selected" : true
+        }, {
+          "key" : "avg_daily_pct_change",
+          "column" : "avg_daily_pct_change",
+          "label" : "avg_daily_pct_change",
+          "selected" : true
+        }, {
+          "key" : "total_monthly_change",
+          "column" : "total_monthly_change",
+          "label" : "total_monthly_change",
+          "selected" : true
+        }, {
+          "key" : "month_trend",
+          "column" : "month_trend",
+          "label" : "month_trend",
+          "selected" : true
+        } ],
+        "title" : "Q3 Monthly Average Details"
+      }
+    }, {
+      "key" : "b2b3e6aa304e4decb00fb",
+      "id" : "Text4",
+      "type" : "Text",
+      "properties" : {
+        "content" : "## Bonus: 200-Day Moving Average\n\nCalculates the 200-day moving average for each company and compares the current closing price to the MA. Indicates whether stocks are trading above or below their long-term trend."
+      }
+    }, {
+      "key" : "ca3e388c9d7a4939bd5b6",
+      "id" : "line1",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "qV6gHZhOMa",
+        "title" : "Close Price vs 200-Day MA",
+        "config" : {
+          "xAxisColumn" : "Date",
+          "yAxisColumn" : [ {
+            "name" : "close_price",
+            "agg" : "Avg",
+            "color" : "#6f42c1"
+          }, {
+            "name" : "ma_200",
+            "agg" : "Avg",
+            "color" : "#fd7e14"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "yAxisConfig" : { }
+        },
+        "type" : "line"
+      }
+    }, {
+      "key" : "7ff324e68c654895994ac",
+      "id" : "DataPreview4",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "qV6gHZhOMa",
+        "columns" : [ {
+          "key" : "ticker",
+          "column" : "ticker",
+          "label" : "ticker",
+          "selected" : true
+        }, {
+          "key" : "Date",
+          "column" : "Date",
+          "label" : "Date",
+          "selected" : true
+        }, {
+          "key" : "close_price",
+          "column" : "close_price",
+          "label" : "close_price",
+          "selected" : true
+        }, {
+          "key" : "ma_200",
+          "column" : "ma_200",
+          "label" : "ma_200",
+          "selected" : true
+        }, {
+          "key" : "price_vs_ma",
+          "column" : "price_vs_ma",
+          "label" : "price_vs_ma",
+          "selected" : true
+        } ],
+        "title" : "MA Details"
+      }
+    } ]
+  },
+  "instances" : { }
+}
