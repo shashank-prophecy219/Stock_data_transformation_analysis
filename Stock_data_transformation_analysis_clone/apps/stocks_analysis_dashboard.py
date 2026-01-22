@@ -79,3 +79,4 @@ with BusinessApp(app_id = "stocks_analysis_dashboard", meta_info = meta_info) as
         columns = [Column(column = "ticker"),  Column(column = "Date"),  Column(column = "close_price"),  Column(column = "ma_200"),          Column(column = "price_vs_ma")], 
         title = "MA Details"
     )
+    instance1 = AppInstance(instance_id = "amk", schedule = Schedule(time_zone = "GMT", emails = ["email@gmail.com"]))
