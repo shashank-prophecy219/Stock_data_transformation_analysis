@@ -1,10 +1,10 @@
 ---
 version: 2
 models:
-- name: "Stocks_analysis1__q1_final_sorted"
+- name: "Stocks_analysis1__ma_final"
   tags:
   - "prophecy_temp"
-- name: "Stocks_analysis1__ma_final"
+- name: "Stocks_analysis1__q1_final_sorted"
   tags:
   - "prophecy_temp"
 - name: "Stocks_analysis1__q2_final"
