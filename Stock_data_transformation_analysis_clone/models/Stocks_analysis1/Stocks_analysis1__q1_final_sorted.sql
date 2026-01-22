@@ -1,8 +1,8 @@
 {{
   config({    
     "materialized": "ephemeral",
-    "database": "sony",
-    "schema": "orch_test"
+    "database": "t4_demo_data",
+    "schema": "company_share_price_analysis_data"
   })
 }}
 

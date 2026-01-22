@@ -5148,7 +5148,14 @@
   },
   "dependenciesContainer" : {
     "dependencies" : { },
-    "prophecyProjectDependencies" : { }
+    "prophecyProjectDependencies" : {
+      "https://github.com/prophecy-io/prophecy-basics" : "2553"
+    },
+    "dependenciesMetadata" : {
+      "https://github.com/prophecy-io/prophecy-basics" : {
+        "autoUpgrade" : true
+      }
+    }
   },
   "entitiesToSync" : [ ],
   "frontEndLanguage" : "sql",
